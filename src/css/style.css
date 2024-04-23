@@ -1,0 +1,369 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-image: url(../src/img/Estrelas.png);
+    background: #000000 rgb(0, 0, 0);
+    font-family: "Montserrat", sans-serif;
+}
+
+/*-------------------------------------Começo da Nav-------------------------------------------*/
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #090E12;
+    text-align: center;
+    max-width: 5000vh;
+    height: 162px;
+}
+
+.navbar_logo {
+    max-width: 150px;
+    height: 150px;
+    vertical-align: middle;
+}
+
+nav ul li a {
+    display: inline;
+    margin-right: 50px;
+    color: white;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+li {
+    display: inline;
+    margin: 0 auto;
+    margin-right: 20px;
+}
+
+a {
+    margin: 0 auto;
+    left: 10px;
+    text-decoration: none;
+    color: white;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 46.48px;
+    width: 1107.43px;
+    height: 19px;
+    left: calc(50% - 1107.43px/2 - 8.26px);
+    top: 108.4px;
+}
+
+a:hover {
+    transition: 0.5s;
+    background: linear-gradient(270deg, #BBB5AA 0%, #656D63 41.91%, #122649 85.23%);
+    border-radius: 8px;
+}
+
+.navbar_botao_terra {
+    width: 95px;
+    height: 40px;
+    border-radius: 25px;
+    color: white;
+    background: linear-gradient(270deg, #BBB5AA 0%, #656D63 41.91%, #122649 85.23%);
+}
+
+/*-------------------------------------Fim da Nav-------------------------------------------*/
+/*-------------------------------------Incio css Rover-------------------------------------------*/
+.centralizado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* Ajusta a altura conforme necessário */
+}
+
+/*-------------------------------------Fim css Rover-------------------------------------------*/
+/*-------------------------------------Inicio do Css do Index-------------------------------------------*/
+
+main {
+    height: 1000px;
+    /* Defina a altura desejada para o elemento main */
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container_principal {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    top: 5px;
+}
+
+.container_principal_imagem_terra {
+    max-width: 950px;
+    height: 950px;
+}
+
+.container_principal_paragrafo {
+    position: absolute;
+    width: 111px;
+    height: 57px;
+    top: 45%;
+    font-weight: 400;
+    font-size: 46.4769px;
+    line-height: 57px;
+    text-align: center;
+    letter-spacing: 0.33em;
+    color: #FFFFFF;
+}
+
+.container_principal_titulo {
+    display: flex;
+    position: absolute;
+    width: 702px;
+    height: 101px;
+    top: 50%;
+    font-weight: 700;
+    font-size: 179.938px;
+    line-height: 219px;
+    letter-spacing: 0.27em;
+    color: #FFFFFF;
+}
+
+.container_principal_subtitulo {
+    position: absolute;
+    width: 872px;
+    height: 63px;
+    left: calc(50% - 872px/2 + 16px);
+    top: 75%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900px;
+    font-size: 50.641px;
+    line-height: 63px;
+    text-align: center;
+    letter-spacing: 0.32em;
+    color: #7A87B1;
+}
+
+.jornal_de_imagens {
+    text-align: center;
+}
+
+.jornal_de_imagens_titulo {
+    font-weight: 700;
+    font-size: 68.9383px;
+    line-height: 84px;
+    letter-spacing: 0.27em;
+    color: #FFFFFF;
+    margin-top: 50px;
+    /* Adicionado margem superior para separar do título anterior */
+}
+
+.jornal_de_imagens_subtitulo {
+    font-weight: 700;
+    font-size: 35.641px;
+    line-height: 43px;
+    letter-spacing: 0.32em;
+    color: #7A87B1;
+}
+
+.jornal_de_imagens_cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Distribui os cards uniformemente */
+    margin-top: 20px;
+    /* Adiciona margem superior */
+}
+
+.jornal_de_imagens_cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Centraliza os cards horizontalmente */
+    align-items: center;
+    /* Centraliza os cards verticalmente */
+    gap: 20px;
+    /* Espaçamento entre os cards */
+    margin-top: 20px;
+}
+
+.card {
+    width: calc(50% - 20px);
+    max-width: 400px;
+    height: 300px;
+    border: #7A87B1 solid 1px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    /* Ajusta a altura da imagem para preencher o card */
+    object-fit: cover;
+    /* Mantém a proporção da imagem e corta para ajustar ao tamanho do card */
+}
+
+/* ----------------------------------------------------Fim do css do index ----------------------------------*/
+
+/*-------------------------------------Inicio de configuração de Responsividade-------------------------------------------*/
+
+@media (max-width: 600px) {
+    .card {
+        width: calc(100% - 20px);
+        /* Ocupa toda a largura da tela */
+    }
+}
+
+/* Estilos para telas pequenas (smartphones) */
+@media (max-width: 600px) {
+    .navbar {
+        height: auto;
+        /* Ajusta a altura automaticamente */
+    }
+
+    .navbar_logo {
+        max-width: 100px;
+        /* Reduz o tamanho do logotipo */
+        height: auto;
+        /* Ajusta a altura automaticamente */
+    }
+
+    nav ul li a {
+        margin-right: 20px;
+        /* Reduz a margem entre os itens do menu */
+    }
+
+    .container_principal_paragrafo {
+        font-size: 24px;
+        /* Reduz o tamanho da fonte */
+    }
+
+    .container_principal_titulo {
+        font-size: 60px;
+        /* Reduz o tamanho da fonte */
+    }
+
+    .container_principal_subtitulo {
+        font-size: 30px;
+        /* Reduz o tamanho da fonte */
+    }
+
+    .jornal_de_imagens_titulo {
+        font-size: 40px;
+        /* Reduz o tamanho da fonte */
+    }
+
+    .jornal_de_imagens_subtitulo {
+        font-size: 20px;
+        /* Reduz o tamanho da fonte */
+    }
+
+    .card {
+        width: calc(100% - 20px);
+        /* Ocupa toda a largura da tela */
+        max-width: 100%;
+        /* Ajusta a largura máxima para o tamanho da tela */
+        height: auto;
+        /* Ajusta a altura automaticamente */
+    }
+}
+
+/* Estilos para telas médias (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    /* Adicione estilos específicos para telas médias aqui, se necessário */
+}
+
+/* Estilos para telas grandes (desktops) */
+@media (min-width: 1025px) {
+    /* Adicione estilos específicos para telas grandes aqui, se necessário */
+}
+
+
+/*-------------------------------------Fim de configuação de responsividade-------------------------------------------*/
+
+
+/*-------------------------------------Início da configuração da page earth-------------------------------------------*/
+
+
+
+.Earth_de_imagens_titulo {
+    font-weight: 700;
+    font-size: 68.9383px;
+    line-height: 84px;
+    letter-spacing: 0.27em;
+    color: #FFFFFF;
+    margin-top: 50px;
+    /* Adicionado margem superior para separar do título anterior */
+}
+
+.jornal_de_imagens_subtitulo {
+    font-weight: 700;
+    font-size: 35.641px;
+    line-height: 43px;
+    letter-spacing: 0.32em;
+    color: #7A87B1;
+}
+
+.jornal_de_imagens_cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Distribui os cards uniformemente */
+    margin-top: 20px;
+    /* Adiciona margem superior */
+}
+
+.jornal_de_imagens_cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Centraliza os cards horizontalmente */
+    align-items: center;
+    /* Centraliza os cards verticalmente */
+    gap: 20px;
+    /* Espaçamento entre os cards */
+    margin-top: 20px;
+}
+
+.card {
+    width: calc(50% - 20px);
+    max-width: 400px;
+    height: 300px;
+    border: #7A87B1 solid 1px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    /* Ajusta a altura da imagem para preencher o card */
+    object-fit: cover;
+    /* Mantém a proporção da imagem e corta para ajustar ao tamanho do card */
+}
+
+
+/*--------------------------------------Fim da configuração da page earth----------------------------------------------*/
