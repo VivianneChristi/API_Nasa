@@ -9,7 +9,6 @@ body {
     background-image: url(../img/Estrelas.png);
     background: #000000 rgb(0, 0, 0);
     font-family: "Montserrat", sans-serif;
-    color: white;
 }
 
 /*-------------------------------------Começo da Nav-------------------------------------------*/
@@ -75,46 +74,7 @@ a:hover {
 
 /*-------------------------------------Fim da Nav-------------------------------------------*/
 
-/*-------------------------------------Inicio da Biblioteca-------------------------------------------*/
-.titulo {
-    display: block;
-    position: absolute;
-    top: 30%;
-    left: 35%;
-    letter-spacing: 0.27em;
-    font-size: 80px;
-    color: #FFFFFF;
+h1 {
+    background-color: yellow;
+    margin: 0 auto;
 }
-
-.sub {
-    display: flex;
-    position: absolute;
-    top: 39%;
-    left: 40%;
-    letter-spacing: 0.27em;
-    color: #FFFFFF;
-    font-family: 'Montserrat';
-    font-style: normal;
-    text-align: center;
-   font-size: 30px;
-    color: #7A87B1;
-}
-
-/* Estilo para o contêiner de imagens */
-.biblioteca {
-    margin-top: 300px;
-    display: flex; /* Usar flexbox para alinhar as imagens horizontalmente */
-    flex-wrap: wrap; /* Permitir que as imagens quebrem para a próxima linha conforme necessário */
-    justify-content: center; /* Alinhar as imagens no centro horizontalmente */
-}
-
-/* Estilo para as imagens individuais */
-.biblioteca img {
-    border: solid 1px rgb(113, 113, 255);
-    border-radius: 5px;
-    margin: 10px; /* Adicionar margem entre as imagens */
-    max-width: 100%; /* Garantir que as imagens não ultrapassem o contêiner */
-}
-  
-
-/*-------------------------------------Fim da Biblioteca-------------------------------------------*/
