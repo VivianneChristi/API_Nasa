@@ -20,7 +20,6 @@
             <li><a href="index.html " class="navbar_text_bibloteca_img_videos">Inicio</a>
             </li>
             <li><a href="rover.html" class="navbar_text_fts_rover_marte">FOTOS DO ROVER DE MARTE</a></li>
-            <li><a href="asteirodes.html" class="navbar_text_asteroides">ASTERÓIDES - NeoWs</a></li>
             <a href="earth.html"><button class="navbar_botao_terra">TERRA</button></a>
         </ul>
     </nav>
@@ -28,17 +27,18 @@
     <main class="main-container">
         <div class="texto_principal_rover">Escolha o Rover:</div>
         <div class="select-botao-container">
-            <select name="rover" id="rover">
+            <select name="rover" id="rover" onchange="checkRoverSelection()">
                 <option value="curiosity">Curiosity</option>
-                <option value="opportunity">Opportunity</option>
-                <option value="spirit">Spirit</option>
+                <option value="opportunity" disabled>Opportunity (Indisponível)</option>
+                <option value="spirit" disabled>Spirit (Indisponível)</option>
             </select>
             <button class="botao_rover" onclick="visualizarFotos()">Visualizar Fotos</button>
         </div>
 
         <div class="imagens_rover">
-            <!-- Aqui serão exibidas as imagens do rover selecionado -->
+            <!-- Os cards serão adicionados dinamicamente aqui -->
         </div>
+
     </main>
 
 

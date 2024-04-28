@@ -9,7 +9,7 @@ function fetchRandomNasaImages() {
             const imgElements = document.querySelectorAll('.jornal_de_imagens_cards img');
             const items = data.collection.items;
             const randomIndexes = getRandomIndexes(items.length, imgElements.length);
-            
+
             for (let i = 0; i < imgElements.length; i++) {
                 const randomIndex = randomIndexes[i];
                 const imageUrl = items[randomIndex].links[0].href;
@@ -42,11 +42,11 @@ setInterval(fetchRandomNasaImages, 10000); // 10000 milissegundos = 10 segundos
 //------------------------------------------ Script da Earth ----------------------------------------------
 
 
-async function locaisTerra(){
-let lon = 43.21;
-let lat = 22.95;
-let ano = 2018;
-const response = await fetch(`https://api.nasa.gov/planetary/earth/assets?lon=${lon}&lat=${lat}&date=${ano}-01-01&&dim=0.10&api_key=9WBfmyWKPIgoa0zmt2sGuWaCEYap3aL2zbaY9DrF`)
+async function locaisTerra() {
+    let lon = 43.21;
+    let lat = 22.95;
+    let ano = 2018;
+    const response = await fetch(`https://api.nasa.gov/planetary/earth/assets?lon=${lon}&lat=${lat}&date=${ano}-01-01&&dim=0.10&api_key=9WBfmyWKPIgoa0zmt2sGuWaCEYap3aL2zbaY9DrF`)
         .then(response => {
             if (!response.ok) throw new Error('Network response was not ok');
             return response.json();
@@ -55,7 +55,7 @@ const response = await fetch(`https://api.nasa.gov/planetary/earth/assets?lon=${
             const imgElements = document.querySelectorAll('.container');
             const image = data.url;
             console.log(image);
-            
+
             for (let i = 0; i < imgElements.length; i++) {
                 const randomIndex = randomIndexes[i];
                 const imageUrl = items[randomIndex].links[0].href;
@@ -65,7 +65,8 @@ const response = await fetch(`https://api.nasa.gov/planetary/earth/assets?lon=${
         })
         .catch(error => console.error('Erro ao fazer a chamada da API da NASA:', error));
 
-;}
+    ;
+}
 
 locaisTerra();
 
@@ -73,13 +74,22 @@ locaisTerra();
 
 //------------------------------------------ Inicio Script Rover ----------------------------------------------
 
-
 function visualizarFotos() {
     var roverSelecionado = document.getElementById("rover").value;
-    fetchRoverImages(roverSelecionado);
+    fetchRoverImages(roverSelecionado, 5);
 }
 
-async function fetchRoverImages(rover) {
+function checkRoverSelection() {
+    var roverSelecionado = document.getElementById("rover").value;
+    if (roverSelecionado === "opportunity" || roverSelecionado === "spirit") {
+        alert("Erro de Conexão: Este rover não está disponível no momento.");
+        // Reverter a seleção para Curiosity
+        document.getElementById("rover").value = "curiosity";
+    }
+}
+
+
+async function fetchRoverImages(rover, count) {
     const response = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/photos?sol=1000&api_key=DEMO_KEY`)
         .then(response => {
             if (!response.ok) throw new Error('Network response was not ok');
@@ -88,16 +98,23 @@ async function fetchRoverImages(rover) {
         .then(data => {
             const imgContainer = document.querySelector('.imagens_rover');
             imgContainer.innerHTML = ''; // Limpa as imagens anteriores
-            
-            data.photos.forEach(photo => {
+
+            // Limita o número de fotos a serem exibidas
+            const photos = data.photos.slice(0, count);
+
+            photos.forEach(photo => {
                 const imageUrl = photo.img_src;
                 const imgElement = document.createElement('img');
                 imgElement.src = imageUrl;
                 imgElement.alt = 'Foto do rover em Marte';
-                imgContainer.appendChild(imgElement);
+                const cardElement = document.createElement('div');
+                cardElement.classList.add('card_rover');
+                cardElement.appendChild(imgElement);
+                imgContainer.appendChild(cardElement);
             });
         })
         .catch(error => console.error('Erro ao fazer a chamada da API da NASA:', error));
 }
+
 
 //------------------------------------------ Fim Script Rover ----------------------------------------------

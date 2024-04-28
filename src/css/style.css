@@ -211,7 +211,7 @@ main {
 
 .main-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-content: center;
     align-items: center;
     text-align: center;
@@ -223,7 +223,6 @@ main {
     text-align: start;
     margin-top: 25px;
     font-size: 35px;
-    
     color: #FFFFFF;
 }
 
@@ -231,7 +230,6 @@ main {
     display: flex;
     align-items: center;
 }
-
 
 #rover {
     width: 200px;
@@ -253,6 +251,38 @@ main {
     text-transform: uppercase;
     cursor: pointer;
 }
+
+.imagens_rover {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center;
+    /* Alinha os cards no início do contêiner */
+}
+
+.card_rover {
+    width: 90%;
+    /* Ajusta a largura para ocupar toda a largura do contêiner com margem */
+    height: auto;
+    /* Altura automática para ajustar ao conteúdo */
+    border: #122649 1px solid;
+    margin: 15px;
+    /* Margem entre os cards */
+    box-sizing: border-box;
+    /* Inclui a largura da borda no cálculo total da largura */
+}
+
+.card_rover img {
+    width: 100%;
+    /* Ajusta a largura da imagem para ocupar toda a largura do card */
+    height: auto;
+    /* Altura automática para manter a proporção da imagem */
+}
+
+
+
+
+
 
 /*-------------------------------------Fim css Rover-------------------------------------------*/
 /*-------------------------------------Inicio de configuração de Responsividade-------------------------------------------*/
