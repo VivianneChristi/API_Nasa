@@ -364,9 +364,11 @@ main {
 
 /*-------------------------------------Início da configuração da page earth-------------------------------------------*/
 
+/*-------------------------------------Início da configuração da page earth-------------------------------------------*/
+
 .form_earth {
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
     width: 60%;
     gap: 20px;
@@ -375,6 +377,35 @@ main {
 .navbar {
     justify-content: center !important;
 }
+
+.container_card {
+    display: flex;
+    height: 500px;
+    width: 100%;
+    flex-direction: row;
+    margin-top: 50px;
+    justify-content: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+.container_Image_Earth {
+    width: 700px;
+    height: 700px;
+    margin: 0 auto;
+}
+
+
+.container_Image_Earth img {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 100px;
+
+}
+
+
+/*--------------------------------------Fim da configuração da page earth----------------------------------------------*/
 
 
 /*--------------------------------------Fim da configuração da page earth----------------------------------------------*/
