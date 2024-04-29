@@ -23,33 +23,34 @@
             </li>
             <li><a href="biblioteca.html" class="navbar_text_bibloteca_img_videos">BIBLIOTECA DE IMAGENS E VÍDEOS</a>
             <li><a href="rover.html" class="navbar_text_fts_rover_marte">FOTOS DO ROVER DE MARTE</a></li>
+            <li><a href="asteirodes.html" class="navbar_text_asteroides">ASTERÓIDES - NeoWs</a></li>
         </ul>
     </nav>
 
 
     <div class="form_earth">
-        <select class="form-select form-select-lg">
+        <select id="localNum" class="form-select form-select-lg">
             <option selected>Escolha um Local:</option>
-            <option value="1">Paris</option>
-            <option value="2">Rio de Janeiro</option>
-            <option value="3">Londres</option>
+            <option value="1" class="optionName">Cristo Redentor</option>
+            <option value="2" class="optionName">Grande Muralha da China</option>
+            <option value="3" class="optionName">Machu Picchu</option>
+            <option value="4" class="optionName">Coliseu de Roma</option>
+            <option value="5" class="optionName">Chichén Itzá</option>
+            <option value="6" class="optionName">Taj Mahal</option>
+            <option value="7" class="optionName">Petra</option>
         </select>
-        <select class="form-select form-select-lg">
+        <select id="yearNum" class="form-select form-select-lg">
             <option selected>Escolha um ano:</option>
             <option value="1">2016</option>
             <option value="2">2018</option>
             <option value="3">2020</option>
         </select>
-        <button class="btn btn-success">Procurar</button>
+        <button id="search" class="btn btn-success">Procurar</button>
     </div>
-
-
-    <div class="container">
-        <div class="card">
-            <img src="">
+    <div class="container_card">
+        <div class="container_Image_Earth">
         </div>
     </div>
-
 
 
     <script src="src/js/script.js"></script>
